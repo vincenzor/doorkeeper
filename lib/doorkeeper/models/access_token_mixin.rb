@@ -14,6 +14,7 @@ module Doorkeeper
                  inverse_of: :access_tokens
 
       validates :token, presence: true, uniqueness: true
+      validates :application_id, presence: true
       validates :refresh_token, uniqueness: true, if: :use_refresh_token?
 
       attr_writer :use_refresh_token
