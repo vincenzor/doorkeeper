@@ -43,6 +43,10 @@ module Doorkeeper
       def validate_client
         !credentials || !!client
       end
+
+      def validate_credentials
+        !!credentials
+      end
     end
   end
 end
